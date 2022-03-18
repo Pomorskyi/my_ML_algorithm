@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 public class InputFile {
     private static final int bufSize = 255;
     private final String path;
-    private int numberOfColumns;
+    private static int numberOfColumns;
     private List<Record> records;
 
     public InputFile(String path) {
@@ -102,7 +102,7 @@ public class InputFile {
         return Math.pow(sum, (double) 1 / 2);
     }
 
-    public class Record {
+    public static class Record {
         public float[] date;
         public String decision;
 
