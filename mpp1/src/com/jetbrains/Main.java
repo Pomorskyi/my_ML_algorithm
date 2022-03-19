@@ -7,11 +7,11 @@ public class Main {
 
     public static void main(String[] args) {
         InputFile iris_test = new InputFile(
-                System.getProperty("user.dir") + "\\data2\\iris_test.txt"
+                System.getProperty("user.dir") + "\\data\\iris_test.txt"
         );
 
         InputFile iris_training = new InputFile(
-                System.getProperty("user.dir") + "\\data2\\iris_training.txt"
+                System.getProperty("user.dir") + "\\data\\iris_training.txt"
         );
 
         System.out.print("Input k: ");
@@ -42,7 +42,7 @@ public class Main {
         List<InputFile.Record> testRecords = test.getRecords();
         List<InputFile.Record> trainingRecords = training.getRecords();
 
-        System.out.println("\t\tTestRecord\t\t\t\t\t|\t\tPercentage\t\t\t\t\t|\tIsCorrect");
+        System.out.println("\t\tTestRecord\t\t\t\t\t|\t\tNeighbourhood\t\t\t\t\t|\tIsCorrect");
         for (InputFile.Record testRecord : testRecords) {
             if (testInstance(testRecord, trainingRecords,
                     k, test.getNumberOfColumns() - 1))
